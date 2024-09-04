@@ -5,7 +5,7 @@ const CategoryButton = ({ categoryName, current }) => {
     <button
       className={`${
         current ? "bg-black text-white" : ""
-      } text-sm text-nowrap border border-black px-2 py-1 mr-6`}
+      } text-sm text-nowrap border border-black px-2 py-1 `}
     >
       {categoryName}
     </button>

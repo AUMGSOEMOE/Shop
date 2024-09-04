@@ -1,5 +1,6 @@
 import React from "react";
 import Rating from "./Rating";
+import { Link } from "react-router-dom";
 
 const ProductCard = ({
   product: {
@@ -13,8 +14,11 @@ const ProductCard = ({
   },
 }) => {
   return (
-    <div className="border flex flex-col border-black p-4">
-      <img src={image} className=" h-[40%]" alt="" />
+    <Link
+      to={`/detail/${id}`}
+      className="border flex flex-col gap-4 border-black p-4"
+    >
+      <img src={image} className=" w-[30%]" alt="" />
       <p className=" font-bold line-clamp-2">{title}</p>
       <Rating rate={rate} className="" />
       <div className="flex justify-between  w-full items-center">
@@ -23,7 +27,7 @@ const ProductCard = ({
           Add Cart
         </button>
       </div>
-    </div>
+    </Link>
   );
 };
 
